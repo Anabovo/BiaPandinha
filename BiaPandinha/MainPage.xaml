@@ -5,28 +5,31 @@
 
   <Grid>
   <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="400"/>
-            <RowDefinition Height="50"/>
             <RowDefinition Height="60"/>
   </Grid.RowDefinitions>
    
   <Grid.ColumnDefinitions>
+            <ColumnDefinitions Width="90"/>
             <ColumnDefinitions Width="*"/>
-            <ColumnDefinitions Width="*"/>
-  <Grid.ColumnDefinitions>
+  </Grid.ColumnDefinitions>
 
-  <Image Source="InicioFlor.png"/>
+  <Image Source="InicioFlor.png"
+         Aspect="AspectFill"
+         Grid.Row="1"
+         Grid.Column="0"
+         Grid.ColumnSpan="2"/>
+  
+  <Image x:Name="InicioFlor."/>
    
   <Label Text="Feed your pet"
          TextColor="#FF69B4"
          Margin="20,30,20,50"
          FontSize="75"
-         FontFamily=""
+         FontFamily="Candy Beans"
+         Grid.Row=""/>
 
        
- 
-<Label>
-        
-
+</Grid>      
 </ContentPage>
