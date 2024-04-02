@@ -4,32 +4,24 @@
              x:Class="BiaPandinha.MainPage">
 
   <Grid>
-  <Grid.RowDefinitions>
-            <RowDefinition Height="90"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
-  </Grid.RowDefinitions>
-   
-  <Grid.ColumnDefinitions>
-            <ColumnDefinitions Width="90"/>
-            <ColumnDefinitions Width="*"/>
-  </Grid.ColumnDefinitions>
 
-  <Image Source="InicioFlor.png"
-         Aspect="AspectFill"
-         Grid.Row="1"
-         Grid.Column="0"
-         Grid.ColumnSpan="2"/>
-  
-  <Image x:Name="InicioFlor."/>
-   
-  <Label Text="Feed your pet"
-         TextColor="#FF69B4"
-         Margin="20,30,20,50"
-         FontSize="75"
-         FontFamily="Candy Beans"
-         Grid.Row=""/>
+       <Image Source="fundo.png"
+              Aspect="AspectFill"/>
 
-       
-</Grid>      
+       <Image x:Name="fundo"
+              Source="girafa.png"
+              Aspect="AspectFill"
+              Margin="65, 0"
+              VerticalOptions="End"/>
+
+       <Frame VerticalOptions="Start"
+              Margin="10, 20"
+              BackgroundColor="#9ACD32"
+              HeightRequest="200"
+              CornerRadius="30">
+
+
+       </Frame>
+              
+  </Grid>      
 </ContentPage>
