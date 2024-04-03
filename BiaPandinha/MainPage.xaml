@@ -11,7 +11,7 @@
        <Image x:Name="fundo"
               Source="girafa.png"
               Aspect="AspectFill"
-              Margin="65, 0"
+              Margin="60, 0, 10, 0"
               VerticalOptions="End"/>
 
        <Frame VerticalOptions="Start"
@@ -20,8 +20,34 @@
               HeightRequest="200"
               CornerRadius="30">
 
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+          
+       <ImageButton x:Name ="seta"
+                    Source="seta.pnj"
+                    Grid.Row="0"/>
 
-       </Frame>
-              
-  </Grid>      
+       <ImageButton x:Name ="carne"
+                    Source="carne.pnj"
+                    Grid.Row="1"/>
+       
+       <ImageButton x:Name ="agua"
+                    Source="agua.pnj"
+                    Grid.Row="2"/>
+
+       <ImageButton x:Name ="brinquedo"
+                    Source="brinquedo.pnj"
+                    Grid.Row="3"/>
+       
+
+
+       
+             
+
+</Frame>
+</Grid> 
 </ContentPage>
