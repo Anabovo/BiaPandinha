@@ -10,44 +10,67 @@
 
        <Image x:Name="fundo"
               Source="girafa.png"
-              Aspect="AspectFill"
-              Margin="60, 0, 10, 0"
+              Aspect="AspectFit"
+              Margin="0, 100, 10, 0"
               VerticalOptions="End"/>
 
        <Frame VerticalOptions="Start"
-              Margin="10, 20"
+              Margin="10"
               BackgroundColor="#9ACD32"
-              HeightRequest="200"
-              CornerRadius="30">
-
+              HeightRequest="150"
+              CornerRadius="30"
+              Padding="0.5">
+<Grid>
           <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
           </Grid.RowDefinitions>
           
-       <ImageButton x:Name ="seta"
-                    Source="seta.pnj"
-                    Grid.Row="0"/>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
 
-       <ImageButton x:Name ="carne"
-                    Source="carne.pnj"
-                    Grid.Row="1"/>
+       <Image  Source="carne.png"
+               Grid.Row="0"
+               Grid.Column="0"/>
        
-       <ImageButton x:Name ="agua"
-                    Source="agua.pnj"
-                    Grid.Row="2"/>
+       <PrograssBar x:Name="carne"
+                    ProgressColor="Black"
+                    Width="1"
+                    Heigth="1"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
 
-       <ImageButton x:Name ="brinquedo"
-                    Source="brinquedo.pnj"
-                    Grid.Row="3"/>
+       <Image  Source="agua.png"
+               Grid.Row="1"
+               Grid.Column="0"/>
+
+       <PrograssBar x:Name="agua"
+                    ProgressColor="Black"
+                    Width="1"
+                    Heigth="1"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+
+       <Image  Source="brinquedo.png"
+               Grid.Row="2"
+               Grid.Column="0"/>
+
+       <PrograssBar x:Name="brinquedo"
+                    ProgressColor="Black"
+                    
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+
+                    
        
 
 
        
              
-
+</Grid> 
 </Frame>
 </Grid> 
 </ContentPage>
