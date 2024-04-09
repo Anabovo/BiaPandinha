@@ -91,18 +91,22 @@
                         <ImageButton Source="seta.png"
                                      Grid.Row="0"
                                      Grid.Column="0"/>
+                        
 
                         <ImageButton Source="carne.png"
                                      Grid.Row="1"
-                                     Grid.Column="0"/>
+                                     Grid.Column="0"
+                                     ButtonClicked="comeranimalfoiclicado"/>/>
 
                         <ImageButton Source="agua.png"
                                      Grid.Row="2"
-                                     Grid.Column="0"/> 
+                                     Grid.Column="0"
+                                     ButtonClicked="beberanimalfoiclicado"/>/> 
 
                         <ImageButton Source="brinquedo.png"
                                      Grid.Row="3"
-                                     Grid.Column="0"/>    
+                                     Grid.Column="0"
+                                     ButtonClicked="brincaranimalfoiclicado"/>/>    
                                                
 
                         

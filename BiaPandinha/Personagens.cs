@@ -1,17 +1,47 @@
 namespace BiaPandinha;
 
-public class Personagens
+public class Animais
 {
     protected double fome;
 
-    protected double tristeza;
+    protected double alegria;
 
     protected double sede;
 
-      public Personagens()
+    protected string Arquivo;
+
+      public Animais()
       {
-        fome=0.5;
-        tristeza=1;
-        sede=0.7;
+      }
+      public void SetComer(double f)
+      {
+        if(f>1)
+        fome=1;
+        else if (f<=0)
+      }
+
+      public double GetComer()
+      {
+        return fome;
+      }
+
+      public Void SetBeber
+      {
+        sede=s;
+      }
+
+      public double GetBeber
+      {
+        return sede;
+      }
+
+      public void SetBrincar()
+      {
+        alegria=a;
+      }
+
+      public double GetBrincar()
+      {
+        return alegria;
       }
 }
