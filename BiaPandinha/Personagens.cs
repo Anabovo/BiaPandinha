@@ -13,11 +13,14 @@ public class Animais
       public Animais()
       {
       }
-      public void SetComer(double f)
+      public void SetComer(double s)
       {
-        if(f>1)
-        fome=1;
-        else if (f<=0)
+        if(s>1)
+        fome=s;
+        else if (s<=0)
+        fome=0;
+        else
+        fome=s;
       }
 
       public double GetComer()
@@ -25,23 +28,38 @@ public class Animais
         return fome;
       }
 
-      public Void SetBeber
+      public void SetBeber(double s)
       {
+        if(s>1)
+        sede=s;
+        else if (s<=0)
+        sede=0;
+        else
         sede=s;
       }
 
-      public double GetBeber
+      public double GetBeber()
       {
         return sede;
       }
 
-      public void SetBrincar()
+      public void SetBrincar(double s)
       {
-        alegria=a;
+        if(s>1)
+        alegria=s;
+        else if (s<=0)
+        alegria=0;
+        else
+        alegria=s;
       }
 
       public double GetBrincar()
       {
         return alegria;
+      }
+
+      public string GetArquivo()
+      {
+        return Arquivo;
       }
 }

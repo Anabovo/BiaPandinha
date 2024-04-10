@@ -4,7 +4,7 @@ namespace BiaPandinha;
 
 public partial class MainPage : ContentPage
 {
-    Animation atual;
+    Animais atual;
 
 	Girafa Gigi = new Girafa();
 
@@ -15,11 +15,12 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
         atual = Gigi;
-		AtualizarPersonagem();
+
+imgAnimais.Source=atual.GetArquivo();
+
 		var timer=Application.Current.Dispatcher.CreateTimer();
 		timer.Interval=TimeSpan.FromSeconds(5);
 		timer.Tick+=(s,e)=>
-		PassouTempo();
 		timer.Start();
 	}
 	void mudaranimalfoiclicado(object sender, EventArgs args)
@@ -36,13 +37,13 @@ public partial class MainPage : ContentPage
 		{
 			atual=Gigi;
 		}
-		imgPersonagem.Source=atual.GetArquivo();
+		imgAnimais.Source=atual.GetArquivo();
 	}
    void AtualizarBarra()
    {
-    progressobrincar.Progress=atual.GetBrincar();
-	progressocomer.Progress=atual.GetComer();
-	progressobeber.Progress=atual.GetBeber();
+    progressobrinquedo.Progress = atual.GetBrincar();
+	progressocarne.Progress = atual.GetComer();
+	progressoagua.Progress = atual.GetBeber();
 
    }
   void brincaranimalfoiclicado(object sender, EventArgs args)
@@ -59,7 +60,7 @@ public partial class MainPage : ContentPage
 
   void beberanimalfoiclicado(object sender, EventArgs args)
   {
-	atual.SetBeber(AtualizarBarra.GetBeber()+0.1);
+	atual.SetBeber(atual.GetBeber()+0.1);
 	AtualizarBarra();
   }
 }

@@ -9,8 +9,7 @@
        <Image Source="fundo.png"
               Aspect="AspectFill"/>
 
-       <Image x:Name="girafa"
-              Source="girafa.png"
+       <Image x:Name="imgAnimais"
               Aspect="AspectFit"
               Margin="0, 200, 30, 0"
               VerticalOptions="End"/>
@@ -39,7 +38,7 @@
                                 Grid.Row="0"
                                 Grid.Column="0"/>
                         
-                        <ProgressBar x:Name="carne"
+                        <ProgressBar x:Name="progressocarne"
                                         ProgressColor="Black"
                                         Grid.Row="0"
                                         Grid.Column="1"/>
@@ -48,7 +47,7 @@
                                 Grid.Row="1"
                                 Grid.Column="0"/>
 
-                        <ProgressBar x:Name="agua"
+                        <ProgressBar x:Name="progressoagua"
                                         ProgressColor="Black"
                                         Grid.Row="1"
                                         Grid.Column="1"/>
@@ -57,24 +56,25 @@
                                 Grid.Row="2"
                                 Grid.Column="0"/>
 
-                        <ProgressBar x:Name="brinquedo"
+                        <ProgressBar x:Name="progressobrinquedo"
                                         ProgressColor="Black"
                                         Grid.Row="2"
                                         Grid.Column="1"/>    
         
                  </Grid> 
-                     </Frame>
+        </Frame>
 
         <Frame HeightRequest="300"
-               CornerRadius="40"
+               CornerRadius="20"
                Padding="0"
+               Margin="0, 0, 10, 0"
                BorderColor="Black"
                BackgroundColor="#9ACD32"
                HorizontalOptions="End"
                VerticalOptions="Fill"
                Grid.Column="1"
                Grid.Row="1"
-               WidthRequest="80">
+               WidthRequest="40">
 
                 <Grid>
                         <Grid.RowDefinitions>
@@ -90,32 +90,25 @@
 
                         <ImageButton Source="seta.png"
                                      Grid.Row="0"
-                                     Grid.Column="0"/>
+                                     Grid.Column="0"
+                                     Clicked="mudaranimalfoiclicado"/>
                         
 
                         <ImageButton Source="carne.png"
                                      Grid.Row="1"
                                      Grid.Column="0"
-                                     ButtonClicked="comeranimalfoiclicado"/>/>
+                                     Clicked="comeranimalfoiclicado"/>
 
                         <ImageButton Source="agua.png"
                                      Grid.Row="2"
                                      Grid.Column="0"
-                                     ButtonClicked="beberanimalfoiclicado"/>/> 
+                                     Clicked="beberanimalfoiclicado"/> 
 
                         <ImageButton Source="brinquedo.png"
                                      Grid.Row="3"
                                      Grid.Column="0"
-                                     ButtonClicked="brincaranimalfoiclicado"/>/>    
-                                               
-
-                        
-
-                            
-
-
-              
-       </Grid> 
+                                     Clicked="brincaranimalfoiclicado"/>    
+                </Grid> 
          </Frame>
                                  
 </Grid> 
