@@ -16,11 +16,11 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
         atual = Gigi;
 
-imgAnimais.Source=atual.GetArquivo();
+    imgAnimais.Source=atual.GetArquivo();
 
 		var timer=Application.Current.Dispatcher.CreateTimer();
-		timer.Interval=TimeSpan.FromSeconds(5);
-		timer.Tick+=(s,e)=>
+		timer.Interval=TimeSpan.FromSeconds(2);
+		timer.Tick+=(s,e)=> DescerBarra();
 		timer.Start();
 	}
 	void mudaranimalfoiclicado(object sender, EventArgs args)
@@ -51,17 +51,34 @@ imgAnimais.Source=atual.GetArquivo();
 	atual.SetBrincar(atual.GetBrincar()+0.1);
 	AtualizarBarra();
   }
-
+//---------------------------------------------------------------------
   void comeranimalfoiclicado(object sender, EventArgs args)
   {
 	atual.SetComer(atual.GetComer()+0.1);
 	AtualizarBarra();
   }
-
+//-----------------------------------------------------------------------------------------------------
   void beberanimalfoiclicado(object sender, EventArgs args)
   {
 	atual.SetBeber(atual.GetBeber()+0.1);
 	AtualizarBarra();
   }
+//--------------------------------------------------------------------------------------------------
+   void DescerBarra()
+   {
+	atual.SetComer(atual.GetComer() - 0.04);
+	progressocarne.Progress = atual.GetComer();
+
+	atual.SetBeber(atual.GetBeber() - 0.04);
+	progressoagua.Progress = atual.GetBeber();
+
+	atual.SetBrincar(atual.GetBrincar() - 0.04);
+	progressobrinquedo.Progress = atual.GetBrincar();
+    
+	AtualizarBarra();
+	if (Gigi.Get)
+   }
+   
+
 }
 

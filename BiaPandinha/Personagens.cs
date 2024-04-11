@@ -10,6 +10,10 @@ public class Animais
 
     protected string Arquivo;
 
+    protected string arquivomorto;
+
+    protected bool morto;
+
       public Animais()
       {
       }
@@ -60,6 +64,14 @@ public class Animais
 
       public string GetArquivo()
       {
+        if (morto)
+        return arquivomorto;
+        else 
         return Arquivo;
+      }
+
+      public bool Getmorto()
+      {
+        return morto;
       }
 }
